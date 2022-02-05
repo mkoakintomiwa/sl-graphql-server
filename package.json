@@ -1,0 +1,48 @@
+{
+  "name": "sl-community-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "npx ts-node src/index.ts",
+    "int-test": "ava --config int-tests.config.cjs",
+    "test": "ava"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/graphql-upload": "^8.0.9",
+    "@types/morgan": "^1.9.3",
+    "ava": "^3.15.0",
+    "neo-forgery": "^2.0.0",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.test.ts"
+    ],
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  },
+  "dependencies": {
+    "@graphql-tools/merge": "^8.2.1",
+    "@graphql-tools/schema": "^8.3.1",
+    "@graphql-tools/utils": "^8.6.1",
+    "@neo4j/graphql": "^2.4.0",
+    "apollo-server": "^3.5.0",
+    "aws-sdk": "^2.1058.0",
+    "dotenv": "^10.0.0",
+    "graphql": "^15.7.2",
+    "graphql-upload": "^13.0.0",
+    "install": "^0.13.0",
+    "morgan": "^1.10.0",
+    "neo4j-driver": "^4.4.0"
+  }
+}

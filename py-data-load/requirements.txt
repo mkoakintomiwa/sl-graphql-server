@@ -1,0 +1,21 @@
+aiohttp==3.8.1
+aiosignal==1.2.0
+async-timeout==4.0.2
+attrs==21.4.0
+brotlipy @ file:///Users/runner/miniforge3/conda-bld/brotlipy_1636012327632/work
+certifi==2021.10.8
+cffi @ file:///Users/runner/miniforge3/conda-bld/cffi_1636046170920/work
+charset-normalizer @ file:///home/conda/feedstock_root/build_artifacts/charset-normalizer_1638815705608/work
+cryptography @ file:///Users/runner/miniforge3/conda-bld/cryptography_1639699339431/work
+frozenlist==1.2.0
+idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1609836280497/work
+multidict==5.2.0
+pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1636257122734/work
+pyOpenSSL @ file:///home/conda/feedstock_root/build_artifacts/pyopenssl_1633192417276/work
+PySocks @ file:///Users/runner/miniforge3/conda-bld/pysocks_1635862648593/work
+python-graphql-client==0.4.3
+requests @ file:///home/conda/feedstock_root/build_artifacts/requests_1637771257551/work
+six @ file:///home/conda/feedstock_root/build_artifacts/six_1620240208055/work
+urllib3 @ file:///home/conda/feedstock_root/build_artifacts/urllib3_1632350318291/work
+websockets==10.1
+yarl==1.7.2

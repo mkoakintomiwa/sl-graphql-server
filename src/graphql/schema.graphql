@@ -1,0 +1,96 @@
+type Brand {
+    id: ID! @id
+    name: String!
+    description: String
+    logoUrl: String
+    website: String!
+    shopifyToken: String!
+    domain: String!
+    mainColor: String
+    backgroundImageUrl: String
+    createdAt: DateTime! @timestamp(operations: [CREATE])
+    updatedAt: DateTime! @timestamp(operations: [UPDATE])
+    members: [User!]! @relationship(type: "MEMBER_OF", properties: "MemberOf", direction: IN)
+    employees: [User!]! @relationship(type: "EMPLOYEE_OF", properties: "EmployeeOf", direction: IN)
+    posts: [Post!]! @relationship (type: "IN_BRAND_COMMUNITY", direction: IN)
+    perks: [Perk!]! @relationship (type: "IN_BRAND_COMMUNITY", direction: IN)
+    causes: [Cause!]! @relationship (type: "HAS_CAUSE", direction: OUT)
+}
+type User {
+    id: ID! @id
+    firebaseId: String! @unique
+    name: String!
+    description: String
+    email: String! @unique
+    accountPictureUrl: String
+    createdAt: DateTime! @timestamp(operations: [CREATE])
+    updatedAt: DateTime! @timestamp(operations: [UPDATE])
+    memberOfBrands: [Brand!]! @relationship(type: "MEMBER_OF", properties: "MemberOf", direction: OUT)
+    employeeOfBrands: [Brand!]! @relationship(type: "EMPLOYEE_OF", properties: "EmployeeOf", direction: OUT)
+    creatorOfPosts: [Post!]! @relationship (type: "CREATED_BY", direction: IN)
+    creatorOfComments: [Comment!]! @relationship (type: "CREATED_BY", direction: IN)
+    causes: [Cause!]! @relationship (type: "HAS_CAUSE", direction: OUT)
+}
+interface MemberOf @relationshipProperties {
+    tier: String!
+    createdAt: DateTime! @timestamp(operations: [CREATE])
+    updatedAt: DateTime! @timestamp(operations: [UPDATE])
+}
+interface EmployeeOf @relationshipProperties {
+    roles: [String!]
+    founder: Boolean!
+    owner: Boolean!
+    jobTitle: String!
+    createdAt: DateTime! @timestamp(operations: [CREATE])
+    updatedAt: DateTime! @timestamp(operations: [UPDATE])
+}
+type Post {
+    id: ID! @id
+    title: String!
+    type: String!
+    body: String
+    linkUrl: String
+    images: [String!]
+    createdAt: DateTime! @timestamp(operations: [CREATE])
+    updatedAt: DateTime! @timestamp(operations: [UPDATE])
+    inBrandCommunity: Brand! @relationship (type: "IN_BRAND_COMMUNITY", direction: OUT)
+    createdBy: User! @relationship (type: "CREATED_BY", direction: OUT)
+    comments: [Comment!]! @relationship (type: "COMMENT_ON", direction: IN)
+}
+type Comment {
+    id: ID! @id
+    body: String!
+    createdAt: DateTime! @timestamp(operations: [CREATE])
+    updatedAt: DateTime! @timestamp(operations: [UPDATE])
+    createdBy: User! @relationship (type: "CREATED_BY", direction: OUT)
+    onPost: Post! @relationship (type: "COMMENT_ON", direction: OUT)
+    onPerk: Perk! @relationship (type: "COMMENT_ON", direction: OUT)
+    onComment: Comment! @relationship (type: "REPLY_TO", direction: OUT)
+    replies: [Comment!]! @relationship (type: "REPLY_TO", direction: IN)
+}
+type Perk {
+    id: ID! @id
+    title: String!
+    type: Int!
+    description: String!
+    details: String!
+    productId: String!
+    productName: String!
+    price: Float!
+    imageUrls: [String!]
+    startDate: DateTime
+    endDate: DateTime
+    createdAt: DateTime! @timestamp(operations: [CREATE])
+    updatedAt: DateTime! @timestamp(operations: [UPDATE])
+    inBrandCommunity: Brand! @relationship (type: "IN_BRAND_COMMUNITY", direction: OUT)
+    createdBy: User! @relationship (type: "CREATED_BY", direction: OUT)
+    comments: [Comment!]! @relationship (type: "COMMENT_ON", direction: IN)
+}
+type Cause {
+    id: ID! @id
+    title: String! @unique
+    createdAt: DateTime! @timestamp(operations: [CREATE])
+    updatedAt: DateTime! @timestamp(operations: [UPDATE])
+    brands: [Brand!]! @relationship (type: "HAS_CAUSE", direction: IN)
+    users: [User!]! @relationship (type: "HAS_CAUSE", direction: IN)
+}

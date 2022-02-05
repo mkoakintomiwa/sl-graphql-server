@@ -1,0 +1,10 @@
+version: 1
+task_definition:
+  ecs_network_mode: bridge
+  services:
+    neo4j:
+      cpu_shares: 1024
+      mem_limit: 4096
+    gql:
+      cpu_shares: 1024
+      mem_limit: 2048

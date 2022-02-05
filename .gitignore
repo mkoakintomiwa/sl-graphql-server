@@ -1,0 +1,5 @@
+.env
+.env.dev
+.env.demo
+node_modules/
+.DS_Store

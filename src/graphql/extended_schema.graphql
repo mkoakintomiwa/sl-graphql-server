@@ -1,0 +1,8 @@
+directive @protectedUrl on FIELD_DEFINITION
+type Brand {
+    logoUrl: String @protectedUrl
+    backgroundImageUrl: String @protectedUrl
+}
+type Post {
+    images: [String!] @protectedUrl
+}

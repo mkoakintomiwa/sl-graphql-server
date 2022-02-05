@@ -1,0 +1,154 @@
+{
+    "brandsData": [
+      {
+        "name": "SeaTime Snacks",
+        "description": "Healthy seaweed snacks for a healthy lifestyle.",
+        "logoUrl": "https://image.shutterstock.com/image-vector/s-letter-logo-volume-icon-260nw-276910010.jpg",
+        "backgroundImageUrl": "https://assets3.thrillist.com/v1/image/1856083/828x610/flatten;crop;webp=auto;jpeg_quality=70",
+        "website": "https://www.seatimesnacks.com",
+        "mainColor": "#35654e",
+        "shopifyToken": "AUTH_TOKEN",
+        "domain": "seatimesnacks.com",
+        "causes": ["healthy eating", "world hunger", "wellness"]
+      },
+      {
+        "name": "Greenpoint Beauty",
+        "description": "Sustainable beauty products for everyone.",
+        "logoUrl": "https://www.thelogomix.com/files/imagecache/v3-logo-detail/Green%20G.jpg",
+        "backgroundImageUrl": "https://img.ti-media.net/wp/uploads/sites/46/2021/06/GettyImages-1249466095-1-920x518.jpg",
+        "website": "https://www.greenpointbeauty.com",
+        "mainColor": "#63e6a7",
+        "shopifyToken": "AUTH_TOKEN",
+        "domain": "greenpointbeauty.com",
+        "causes": ["sustainability", "self-care"]
+      }
+    ],
+    "usersData": [
+      {
+        "name": "Ava Glenn",
+        "email": "ava@mail.com",
+        "firebaseId": "5nOjHZswgVV5vdU7Z6dxKtnXC1I2",
+        "description": "Founder & CEO of SeaTime Snacks",
+        "accountPictureUrl": "http://beauteallure.com/wp-content/uploads/2020/10/03B022FB-5864-472D-98FC-38CDF6A35762-500x380.jpeg",
+        "causes": [],
+        "brands": ["SeaTime Snacks"],
+        "employeeData": {
+          "brand": "SeaTime Snacks",
+          "founder": true,
+          "owner": true,
+          "roles": ["admin"],
+          "jobTitle": "Founder & CEO"
+        }
+      },
+      {
+        "name": "Sarah Smith",
+        "email": "sarah@mail.com",
+        "firebaseId": "mHT0k4zRBachP02VSobyiZ26zIY2",
+        "description": "Dog mom, yogi, healthy snack lover.",
+        "accountPictureUrl": "https://image.freepik.com/free-photo/close-up-isolated-portrait-charming-cheerful-young-caucasian-young-woman-with-dark-hair-brown-eyes-smiling-showing-teeth-with-relaxed-happy-expression-positive-emotions_176420-10698.jpg",
+        "causes": ["wellness"],
+        "brands": ["SeaTime Snacks","Greenpoint Beauty"]
+      },
+      {
+        "name": "Tina Xie",
+        "email": "txie@mail.com",
+        "firebaseId": "SMWWQzAGtrczVmgyRaEFdEvnz523",
+        "description": "Passionate about health, wellness, and the outdoors.",
+        "accountPictureUrl": "https://image.freepik.com/free-photo/cheerful-beautiful-young-asian-woman-feeling-happy-smiling-camera-while-traveling-street-downtown-city_7861-1348.jpg",
+        "causes": ["climate change","inequality"],
+        "brands": ["SeaTime Snacks"]
+      },
+      {
+        "name": "Priyanka Ishani",
+        "email": "priyanka@mail.com",
+        "firebaseId": "Kz7g5t1kffRkN7hPQUMtrmTAAzx2",
+        "description": "Founder of Greenpoint. Proud dog mom.",
+        "accountPictureUrl": "https://media.istockphoto.com/photos/couldnt-be-more-happier-with-my-life-picture-id629077926?k=20&m=629077926&s=612x612&w=0&h=loRSeuNbCYMi6CbVOPsk5pd73lHLUgDIHLr-Yaw5kGA=",
+        "causes": ["climate change","inequality"],
+        "brands": ["Greenpoint Beauty"],
+        "employeeData": {
+          "brand": "Greenpoint Beauty",
+          "founder": true,
+          "owner": true,
+          "roles": ["admin"],
+          "jobTitle": "Founder & CEO"
+        }
+      }
+    ],
+    "postsData": [
+      {
+        "title": "Seaweed Snack Companions",
+        "type": "text",
+        "body": "We're curious about what people usually eat our snacks with. What else goes well with our seaweed snacks?",
+        "brand": "SeaTime Snacks",
+        "creator": "ava@mail.com",
+        "conversationIndex": 0
+      },
+      {
+        "title": "Jalapeño Reviews",
+        "type": "text",
+        "body": "Has anyone tried the jalapeño flavor? I want to try it but wanted to check in here first!",
+        "brand": "SeaTime Snacks",
+        "creator": "sarah@mail.com",
+        "conversationIndex": 1
+      },
+      {
+        "title": "Annual Cleanse - any suggestions?",
+        "type": "text",
+        "body": "I'm looking into a cleanse to start the year off right, does anyone have juice cleanses they swear by?",
+        "brand": "SeaTime Snacks",
+        "creator": "txie@mail.com"
+      }
+    ],
+    "perksData": [
+      {
+        "title": "Roasted Garlic Seaweed Snack",
+        "type": 2,
+        "description": "New flavor drop! Early access only for community members.",
+        "details": "Savory roasted garlic made with 100% natural ingredients.",
+        "productId": "7088444047543",
+        "productName": "Roasted Garlic Seaweed Snack",
+        "price": 2.50,
+        "imageUrls": ["https://skinnyms.com/wp-content/uploads/2017/01/Sesame-Garlic-Nori-Chips-Recipe.jpg"],
+        "startDate": 3,
+        "endDate": 7,
+        "brand": "SeaTime Snacks",
+        "creator": "ava@mail.com"
+      },
+      {
+        "title": "SeaTime Cap",
+        "type": 1,
+        "description": "SeaTime cap giveaway for community members.",
+        "details": "For being a loyal community members, we're giving you a free SeaTime cap!",
+        "productId": "7088446111927",
+        "productName": "SeaTime Cap [member gift]",
+        "price": 0.0,
+        "imageUrls": ["https://cdn.shopify.com/s/files/1/0594/4452/7309/products/product-image-1666326357_1445x.jpg?v=1634907436"],
+        "startDate": 3,
+        "endDate": 7,
+        "brand": "SeaTime Snacks",
+        "creator": "ava@mail.com"
+      }
+    ],
+    "conversationsData": [
+      [
+        {
+          "body": "OK don't judge, but I crumble the snacks over popcorn when we have movie night LOL. Huge hit at my house!",
+          "creator": "sarah@mail.com",
+          "replies":[
+            {
+              "body": "This is awesome! Definitely going on a future blog post!",
+              "creator": "ava@mail.com"
+            }
+          ]
+        }
+      ],
+    [
+      {
+        "body": "Yesss it's so amazing :) Go for it!",
+        "creator": "txie@mail.com",
+        "replies": []
+      }
+    ]
+    ]
+}
